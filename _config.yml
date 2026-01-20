@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: TechFlow
+subtitle: '探索全栈技术，分享开发经验'
+description: '专注前端、后端、AI 与工程化技术分享'
+keywords: 前端,后端,AI,全栈,React,Vue,TypeScript,JavaScript,Webpack,Vite,微前端
+author: TechExplorer
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
