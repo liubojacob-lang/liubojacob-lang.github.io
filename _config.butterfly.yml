@@ -1124,6 +1124,41 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
+    - |
+      <style>
+        /* 封面图片全屏显示 */
+        #page-header,
+        .page-header,
+        .bg-cover {
+          background-size: cover !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+        }
+
+        /* 首页封面 */
+        #page,
+        .full-screen {
+          background-size: cover !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+        }
+
+        /* 确保背景图片覆盖整个区域 */
+        .cover-bg {
+          background-size: cover !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+          width: 100% !important;
+          height: 100% !important;
+        }
+
+        /* 文章封面 */
+        .post-bg-cover {
+          background-size: cover !important;
+          background-position: center !important;
+          background-repeat: no-repeat !important;
+        }
+      </style>
   bottom:
     # - <script src="xxxx"></script>
 
