@@ -102,7 +102,7 @@ theme: butterfly
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: git@github.com:liubojacob-lang/hexo.github.io.git  # SSH地址
+  repo: git@github.com:liubojacob-lang/liubojacob-lang.github.io.git  # SSH地址
   branch: main  # 部署分支（GitHub Pages默认main）
 
 # hexo-prism-plugin
