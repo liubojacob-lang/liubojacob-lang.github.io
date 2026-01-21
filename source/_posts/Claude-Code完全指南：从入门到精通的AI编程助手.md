@@ -10,6 +10,8 @@ tags:
   - 开发工具
   - 效率工具
   - 实战教程
+keywords: Claude Code,AI编程助手,Anthropic,开发工具,CLI工具,代码生成
+description: Claude Code 是 Anthropic 推出的革命性 AI 编程助手。本文全面介绍 Claude Code 的安装、配置和高级用法，帮助你提升 10 倍开发效率。
 index_img: https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&h=400&fit=crop
 banner_img: https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&h=400&fit=crop
 ---
