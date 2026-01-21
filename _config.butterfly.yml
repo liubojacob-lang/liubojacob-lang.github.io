@@ -651,7 +651,7 @@ valine:
   appKey:
   avatar: monsterid
   # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  serverURLs:
+  serverURLs: 
   bg:
   # Use Valine visitor count as the page view count
   visitor: false
