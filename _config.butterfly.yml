@@ -278,8 +278,8 @@ post_copyright:
 
 # Sponsor/reward
 reward:
-  enable: false
-  text:
+  enable: true
+  text: '如果对你有帮助，请我喝杯咖啡吧 ☕️'
   QR_code:
     # - img: /img/wechat.jpg
     #   link:
@@ -329,12 +329,14 @@ footer:
   nav:
   owner:
     enable: true
-    since: 2025
+    since: 2026
   # Copyright of theme and framework
   copyright:
     enable: true
     version: true
   custom_text:
+  # Blog runtime
+  runtime: true
 
 # --------------------------------------
 # Aside Settings
@@ -359,10 +361,10 @@ aside:
       enable: true
       icon: fab fa-github
       text: Follow Me
-      link: https://github.com/xxxxxx
+      link: https://github.com/liubojacob-lang
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 欢迎来到 TechFlow！专注分享全栈开发与 AI 技术，涵盖前端、后端、工程化及人工智能实战。持续更新中，欢迎交流学习！
   card_recent_post:
     enable: true
     # If set 0 will show all
@@ -661,7 +663,7 @@ waline:
   serverURL: https://waline-eight-lyart.vercel.app
   bg:
   # Use Waline pageview count as the page view count
-  pageview: true
+  pageview: false
   option:
 
 # Utterances
@@ -950,7 +952,7 @@ canvas_nest:
 
 # Mouse click effects: fireworks
 fireworks:
-  enable: false
+  enable: true
   zIndex: 9999
   mobile: false
 
@@ -963,11 +965,18 @@ click_heart:
 clickShowText:
   enable: false
   text:
-    # - I
-    # - LOVE
-    # - YOU
-  fontSize: 15px
-  random: false
+    - TechFlow
+    - 全栈开发
+    - React
+    - Vue
+    - TypeScript
+    - JavaScript
+    - AI
+    - Python
+    - Docker
+    - K8s
+  fontSize: 16px
+  random: true
   mobile: false
 
 # --------------------------------------
@@ -978,7 +987,7 @@ clickShowText:
 # https://github.com/francoischalifour/medium-zoom
 # https://fancyapps.com/fancybox/
 # Leave it empty if you don't need lightbox
-lightbox:
+lightbox: 'fancybox'
 
 # --------------------------------------
 # Tag Plugins settings
@@ -1189,7 +1198,7 @@ CDN:
     # artalk_css:
     # artalk_js:
     # blueimp_md5:
-    # busuanzi:
+    busuanzi:
     # canvas_fluttering_ribbon:
     # canvas_nest:
     # canvas_ribbon:
