@@ -1,0 +1,406 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>FullStack AI</title><meta name="author" content="FullStack Developer"><meta name="copyright" content="FullStack Developer"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="专注前端、后端、AI 与工程化技术分享">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FullStack AI">
+<meta property="og:url" content="https://liubojacob-lang.github.io/index.html">
+<meta property="og:site_name" content="FullStack AI">
+<meta property="og:description" content="专注前端、后端、AI 与工程化技术分享">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://liubojacob-lang.github.io/img/avatar.jpg">
+<meta property="article:author" content="FullStack Developer">
+<meta property="article:tag" content="前端,后端,AI,全栈,React,Vue,TypeScript,JavaScript,Webpack,Vite,微前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://liubojacob-lang.github.io/img/avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "FullStack AI",
+  "alternateName": [
+    "liubojacob-lang.github.io"
+  ],
+  "url": "https://liubojacob-lang.github.io/"
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://liubojacob-lang.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4-b1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.7/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":-1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":10},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'FullStack AI',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><style>
+  /* 封面图片全屏显示 */
+  #page-header,
+  .page-header,
+  .bg-cover {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* 首页封面 */
+  #page,
+  .full-screen {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* 确保背景图片覆盖整个区域 */
+  .cover-bg {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* 文章封面 */
+  .post-bg-cover {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* ========== 优化滚动条样式 ========== */
+
+  /* Webkit 浏览器（Chrome, Safari, Edge）*/
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* 滚动条轨道 */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  /* 滚动条滑块 */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+
+  /* 悬停时的滑块 */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Firefox 浏览器 */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #888 #f1f1f1;
+  }
+
+  /* 深色模式下的滚动条 */
+  [data-theme="dark"] ::-webkit-scrollbar-track {
+    background: #2c2c2c;
+  }
+
+  [data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+
+  [data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+
+  [data-theme="dark"] * {
+    scrollbar-color: #555 #2c2c2c;
+  }
+
+  /* ========== 背景颜色设置 ========== */
+
+  /* 设置网站整体背景为白色 */
+  body,
+  #web-bg {
+    background-color: #ffffff !important;
+  }
+
+  /* 设置卡片背景为白色 */
+  .card-widget,
+  .recent-post-item,
+  .post-card {
+    background-color: #ffffff !important;
+  }
+
+  /* 设置内容区域背景为白色 */
+  #content-inner,
+  .layout,
+  #post {
+    background-color: #ffffff !important;
+  }
+
+  /* ========== 友情链接样式优化 ========== */
+
+  /* 友链列表容器 */
+  .flink-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  /* 友链卡片 */
+  .flink-list-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .flink-list-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--theme-color);
+  }
+
+  /* 友链图标 */
+  .flink-item-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+  }
+
+  .flink-item-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+
+  .flink-list-item:hover .flink-item-icon img {
+    transform: rotate(360deg);
+  }
+
+  /* 友链信息 */
+  .flink-item-name {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--text-highlight-color);
+    margin-bottom: 5px;
+  }
+
+  .flink-item-desc {
+    font-size: 0.9em;
+    color: var(--text-secondary-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    .flink-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<meta name="generator" content="Hexo 8.1.1"><link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">49</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 技术博客</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E5%89%8D%E7%AB%AF/"><i class="fa-fw fab fa-html5"></i><span> 前端开发</span></a></li><li><a class="site-page child" href="/categories/%E5%90%8E%E7%AB%AF/"><i class="fa-fw fab fa-node-js"></i><span> 后端开发</span></a></li><li><a class="site-page child" href="/categories/%E5%85%A8%E6%A0%88/"><i class="fa-fw fas fa-code"></i><span> 全栈实战</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/wiki/"><i class="fa-fw fas fa-book"></i><span> 知识库</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&amp;h=400&amp;fit=crop);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">FullStack AI</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 技术博客</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E5%89%8D%E7%AB%AF/"><i class="fa-fw fab fa-html5"></i><span> 前端开发</span></a></li><li><a class="site-page child" href="/categories/%E5%90%8E%E7%AB%AF/"><i class="fa-fw fab fa-node-js"></i><span> 后端开发</span></a></li><li><a class="site-page child" href="/categories/%E5%85%A8%E6%A0%88/"><i class="fa-fw fas fa-code"></i><span> 全栈实战</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/wiki/"><i class="fa-fw fas fa-book"></i><span> 知识库</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">FullStack AI</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/liubojacob-lang" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/22/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-22T02:51:27.933Z" title="发表于 2026-01-22 10:51:27">2026-01-22</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ hexo generate  More info: Generating Deploy to remote sites1$ hexo deploy  More info: Deployment </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/21/Claude-Code%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E7%9A%84AI%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8B/" title="Claude Code完全指南：从入门到精通的AI编程助手">Claude Code完全指南：从入门到精通的AI编程助手</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-21T04:47:00.000Z" title="发表于 2026-01-21 12:47:00">2026-01-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B7%A5%E5%85%B7/AI/">AI</a></span></div><div class="content">前言 Claude Code 是 Anthropic 推出的革命性 AI 编程助手，它不同于传统的代码补全工具，而是真正理解你的代码库、能够执行复杂任务的智能伙伴。 本文将带你从零开始，全面掌握 Claude Code 的使用技巧，让你的开发效率提升 10 倍！ 一、Claude Code 简介1.1 什么是 Claude Code？Claude Code 是 Anthropic 官方推出的命令行工具，它让 Claude AI 能够直接与你的代码库交互。与 GitHub Copilot 等代码补全工具不同，Claude Code 能够：  📖 理解整个代码库：不仅仅是当前文件，而是整个项目结构 🔧 执行复杂任务：重构、调试、编写测试、生成文档 💬 自然语言交互：用日常语言描述需求，AI 自动完成 🎯 上下文感知：理解项目架构、依赖关系、编码规范  1.2 Claude Code vs 其他工具   特性 Claude Code GitHub Copilot Cursor    代码理解 整个代码库 主要是当前文件 整个代码库   交互方式 自然语言对话 代码补全 混合  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/21/%E6%9E%84%E5%BB%BA%E6%99%BA%E8%83%BDAI%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BB%8ELLM%E5%88%B0AI-Agent%E7%9A%84%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97/" title="构建智能AI应用：从LLM到AI Agent的完整指南">构建智能AI应用：从LLM到AI Agent的完整指南</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-21T03:09:10.000Z" title="发表于 2026-01-21 11:09:10">2026-01-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/AI/">AI</a></span></div><div class="content">前言 随着 GPT-4、Claude、Gemini 等大语言模型（LLM）的爆发式发展，AI 应用开发已经进入了一个全新的时代。从简单的聊天机器人到复杂的 AI Agent，从单一模型调用到 RAG（检索增强生成）系统，开发者正在构建越来越智能的应用。 本文将带你深入了解如何构建现代 AI 应用，涵盖 LLM 集成、Prompt Engineering、AI Agent 开发和 RAG 系统实战。 一、LLM 基础与 API 集成1.1 什么是大语言模型？大语言模型（Large Language Model，LLM）是基于深度学习的自然语言处理模型，通过在海量文本数据上训练，学会了理解和生成人类语言。 主流 LLM 对比：    模型 提供商 特点 适用场景    GPT-4 OpenAI 综合能力强，上下文长 通用任务、复杂推理   Claude 3 Anthropic 安全性强，长文本 分析、总结、代码   Gemini Google 多模态能力强 图文理解、视频分析   Llama 3 Meta 开源，可本地部署 隐私要求高的场景   1.2 快速开始：OpenAI API...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/21/micro-frontend-architecture/" title="微前端架构实战：qiankun与single-spa完全指南">微前端架构实战：qiankun与single-spa完全指南</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-20T16:45:00.000Z" title="发表于 2026-01-21 00:45:00">2026-01-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/%E6%9E%B6%E6%9E%84/">架构</a></span></div><div class="content">前言随着前端应用规模的增长，单体前端应用面临维护困难、部署缓慢、技术栈固化等问题。微前端架构应运而生，它允许我们将大型前端应用拆分成多个小型、独立的应用。 本文将深入讲解微前端架构的两种主流方案：qiankun 和 single-spa。 一、微前端架构概述什么是微前端？12345678910111213141516171819微前端概念：┌─────────────────────────────────────────┐│          微前端应用架构                   │├─────────────────────────────────────────┤│  主应用（Base App）                      ││  - 路由管理                              ││  - 应用加载                              ││  - 状态共享                              ││  - 通信协调                              │├──...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/21/typescript-advanced-guide/" title="TypeScript完全指南：从基础到高级类型系统">TypeScript完全指南：从基础到高级类型系统</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-20T16:30:00.000Z" title="发表于 2026-01-21 00:30:00">2026-01-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/TypeScript/">TypeScript</a></span></div><div class="content">前言TypeScript 为 JavaScript 添加了强大的类型系统，让代码更健壮、更易维护。本文将深入讲解 TypeScript 的核心概念，从基础类型到高级特性。 一、基础类型基本类型注解1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556// 基础类型let username: string = &#x27;Alice&#x27;;let age: number = 25;let isActive: boolean = true;let nothing: null = null;let notDefined: undefined = undefined;// 数组let numbers: number[] = [1, 2, 3];let strings: Array&lt;string&gt; = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;];// 元组（固定长度和类型）l...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/21/frontend-engineering-webpack-vite/" title="前端工程化实战：Webpack与Vite配置完全指南">前端工程化实战：Webpack与Vite配置完全指南</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-20T16:15:00.000Z" title="发表于 2026-01-21 00:15:00">2026-01-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/%E5%B7%A5%E7%A8%8B%E5%8C%96/">工程化</a></span></div><div class="content">前言前端工程化是现代Web开发的基石。Webpack和Vite是目前最流行的构建工具，理解它们的工作原理和配置技巧，对提升开发效率和项目性能至关重要。 本文将深入讲解Webpack和Vite的配置与优化。 一、Webpack 基础配置核心概念12345678910111213141516171819Webpack 工作流程:┌─────────────┐│   Entry     │ 入口文件└──────┬──────┘       │       ▼┌─────────────┐│   Loader    │ 转换非 JS 文件└──────┬──────┘       │       ▼┌─────────────┐│   Plugin    │ 扩展功能└──────┬──────┘       │       ▼┌─────────────┐│   Output    │ 输出文件└─────────────┘  基础配置123456789101112131415161718192021222324252627282930313233343536373839404142...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/21/vue3-composition-api/" title="Vue3完全指南：组合式API与响应式原理深度解析">Vue3完全指南：组合式API与响应式原理深度解析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-20T16:00:00.000Z" title="发表于 2026-01-21 00:00:00">2026-01-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/Vue/">Vue</a></span></div><div class="content">前言Vue3 带来了全新的 Composition API（组合式 API），相比 Options API 提供了更好的逻辑复用和类型推断。同时，Vue3 的响应式系统也从 Object 升级到了 Proxy，性能和功能都有了显著提升。 本文将深入解析 Vue3 的核心特性。 一、Composition API 基础setup 函数123456789101112131415161718192021222324252627282930import &#123; ref, reactive, computed, onMounted &#125; from &#x27;vue&#x27;;export default &#123;  setup() &#123;    // 响应式状态    const count = ref(0);    const user = reactive(&#123; name: &#x27;Alice&#x27;, age: 25 &#125;);    // 计算属性    const doubleCount = computed(() =&gt; c...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/20/javascript-advanced-concepts/" title="JavaScript深入理解：闭包、原型链与异步编程">JavaScript深入理解：闭包、原型链与异步编程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-20T15:45:00.000Z" title="发表于 2026-01-20 23:45:00">2026-01-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/">JavaScript</a></span></div><div class="content">前言JavaScript 作为一门动态语言，有一些独特而强大的特性。深入理解闭包、原型链和异步编程，是从会用 JavaScript 到精通 JavaScript 的必经之路。本文将深入剖析这些核心概念。 一、闭包（Closure）什么是闭包？闭包是指函数能够记住并访问其词法作用域，即使函数在其词法作用域之外执行。 123456789101112131415161718192021222324// 基础闭包示例function createCounter() &#123;  let count = 0;  // 私有变量  return &#123;    increment() &#123;      count++;      return count;    &#125;,    decrement() &#123;      count--;      return count;    &#125;,    getCount() &#123;      return count;    &#125;  &#125;;&#125;const counter = createC...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/20/frontend-performance-optimization/" title="前端性能优化完全指南：从理论到实战">前端性能优化完全指南：从理论到实战</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-20T15:30:00.000Z" title="发表于 2026-01-20 23:30:00">2026-01-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">性能优化</a></span></div><div class="content">前言前端性能直接影响用户体验和业务指标。据统计，页面加载时间每增加1秒，转化率可能下降7%。本文将从多个维度全面介绍前端性能优化的策略和实战技巧。 性能指标核心Web指标（Core Web Vitals）Google 的 Core Web Vitals 是衡量用户体验的核心指标： 123456789101112131415161718┌─────────────────────────────────────────────────┐│           Core Web Vitals 核心指标               │├─────────────────────────────────────────────────┤│  LCP (Largest Contentful Paint)                ││  - 最大内容绘制                                  ││  - 目标: &lt; 2.5秒                                ││  - 测量: 主要内容加载速度               ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2026/01/20/react-hooks-deep-dive/" title="React Hooks完全指南：深入理解现代React开发">React Hooks完全指南：深入理解现代React开发</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2026-01-20T15:00:00.000Z" title="发表于 2026-01-20 23:00:00">2026-01-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/React/">React</a></span></div><div class="content">前言React Hooks 自 React 16.8 版本引入以来，彻底改变了我们编写 React 组件的方式。它让函数组件拥有了状态管理和副作用处理的能力，同时提供了更优雅的代码组织方式。 本文将深入探讨 React Hooks 的核心概念、使用技巧和最佳实践。 为什么需要 Hooks？Hooks 解决的问题123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263// ❌ 旧方式：类组件的痛点class UserProfile extends React.Component &#123;  constructor(props) &#123;    super(props);    this.state = &#123;      user: null,      loading: false,      error: null    &#125;;  &#125;  componentDidMount(...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">FullStack Developer</div><div class="author-info-description">专注前端、后端、AI 与工程化技术分享</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">49</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/liubojacob-lang"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/liubojacob-lang" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到 TechFlow！专注分享全栈开发与 AI 技术，涵盖前端、后端、工程化及人工智能实战。持续更新中，欢迎交流学习！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/22/hello-world/" title="Hello World">Hello World</a><time datetime="2026-01-22T02:51:27.933Z" title="发表于 2026-01-22 10:51:27">2026-01-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/21/Claude-Code%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E7%9A%84AI%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8B/" title="Claude Code完全指南：从入门到精通的AI编程助手">Claude Code完全指南：从入门到精通的AI编程助手</a><time datetime="2026-01-21T04:47:00.000Z" title="发表于 2026-01-21 12:47:00">2026-01-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/21/%E6%9E%84%E5%BB%BA%E6%99%BA%E8%83%BDAI%E5%BA%94%E7%94%A8%EF%BC%9A%E4%BB%8ELLM%E5%88%B0AI-Agent%E7%9A%84%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97/" title="构建智能AI应用：从LLM到AI Agent的完整指南">构建智能AI应用：从LLM到AI Agent的完整指南</a><time datetime="2026-01-21T03:09:10.000Z" title="发表于 2026-01-21 11:09:10">2026-01-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/21/micro-frontend-architecture/" title="微前端架构实战：qiankun与single-spa完全指南">微前端架构实战：qiankun与single-spa完全指南</a><time datetime="2026-01-20T16:45:00.000Z" title="发表于 2026-01-21 00:45:00">2026-01-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/01/21/typescript-advanced-guide/" title="TypeScript完全指南：从基础到高级类型系统">TypeScript完全指南：从基础到高级类型系统</a><time datetime="2026-01-20T16:30:00.000Z" title="发表于 2026-01-21 00:30:00">2026-01-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%A8%E6%A0%88/"><span class="card-category-list-name">全栈</span><span class="card-category-list-count">2</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%A8%E6%A0%88/AI/"><span class="card-category-list-name">AI</span><span class="card-category-list-count">2</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">10</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/AI/"><span class="card-category-list-name">AI</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/JavaScript/"><span class="card-category-list-name">JavaScript</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/React/"><span class="card-category-list-name">React</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/TypeScript/"><span class="card-category-list-name">TypeScript</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/Vue/"><span class="card-category-list-name">Vue</span><span class="card-category-list-count">1</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Claude-Code/" style="font-size: 1.1em; color: #999">Claude Code</a> <a href="/tags/AI-Agent/" style="font-size: 1.1em; color: #999">AI Agent</a> <a href="/tags/Webpack/" style="font-size: 1.1em; color: #999">Webpack</a> <a href="/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/" style="font-size: 1.1em; color: #999">前端工程化</a> <a href="/tags/%E6%B3%9B%E5%9E%8B/" style="font-size: 1.1em; color: #999">泛型</a> <a href="/tags/single-spa/" style="font-size: 1.1em; color: #999">single-spa</a> <a href="/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/" style="font-size: 1.1em; color: #999">效率工具</a> <a href="/tags/LLM/" style="font-size: 1.1em; color: #999">LLM</a> <a href="/tags/Git/" style="font-size: 1.1em; color: #999">Git</a> <a href="/tags/%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/" style="font-size: 1.1em; color: #999">模型部署</a> <a href="/tags/TypeScript/" style="font-size: 1.1em; color: #999">TypeScript</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">深度学习</a> <a href="/tags/%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91/" style="font-size: 1.1em; color: #999">全栈开发</a> <a href="/tags/Composition-API/" style="font-size: 1.1em; color: #999">Composition API</a> <a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" style="font-size: 1.5em; color: #99a9bf">前端开发</a> <a href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" style="font-size: 1.1em; color: #999">神经网络</a> <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 1.23em; color: #999ea6">开发工具</a> <a href="/tags/AI/" style="font-size: 1.37em; color: #99a4b2">AI</a> <a href="/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/" style="font-size: 1.1em; color: #999">原型链</a> <a href="/tags/PyTorch/" style="font-size: 1.1em; color: #999">PyTorch</a> <a href="/tags/qiankun/" style="font-size: 1.1em; color: #999">qiankun</a> <a href="/tags/API%E5%BC%80%E5%8F%91/" style="font-size: 1.1em; color: #999">API开发</a> <a href="/tags/React/" style="font-size: 1.1em; color: #999">React</a> <a href="/tags/Vue3/" style="font-size: 1.1em; color: #999">Vue3</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F/" style="font-size: 1.1em; color: #999">响应式</a> <a href="/tags/Web%E6%80%A7%E8%83%BD/" style="font-size: 1.1em; color: #999">Web性能</a> <a href="/tags/JavaScript/" style="font-size: 1.37em; color: #99a4b2">JavaScript</a> <a href="/tags/Scikit-learn/" style="font-size: 1.1em; color: #999">Scikit-learn</a> <a href="/tags/LangChain/" style="font-size: 1.1em; color: #999">LangChain</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/" style="font-size: 1.1em; color: #999">计算机视觉</a> <a href="/tags/Hooks/" style="font-size: 1.1em; color: #999">Hooks</a> <a href="/tags/RAG/" style="font-size: 1.1em; color: #999">RAG</a> <a href="/tags/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/" style="font-size: 1.1em; color: #999">构建工具</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" style="font-size: 1.1em; color: #999">人工智能</a> <a href="/tags/%E5%BE%AE%E5%89%8D%E7%AB%AF/" style="font-size: 1.1em; color: #999">微前端</a> <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" style="font-size: 1.23em; color: #999ea6">性能优化</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">机器学习</a> <a href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/" style="font-size: 1.1em; color: #999">异步编程</a> <a href="/tags/GitHub/" style="font-size: 1.1em; color: #999">GitHub</a> <a href="/tags/%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84/" style="font-size: 1.1em; color: #999">前端架构</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              一月 2026
+            </span>
+            <span class="card-archive-list-count">15</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">45.5k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-01-22T03:26:05.367Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By FullStack Developer</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4-b1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4-b1"></script><script src="/js/main.js?v=5.5.4-b1"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.7/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["全栈工程师的技术博客","记录 Hexo 与 Butterfly 折腾日常","欢迎交流前端与后端技术"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["全栈工程师的技术博客","记录 Hexo 与 Butterfly 折腾日常","欢迎交流前端与后端技术"])
+}
+typedJSFn.run(subtitleType)</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="输入关键词搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4-b1"></script></div></div></body></html>
