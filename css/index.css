@@ -2500,37 +2500,49 @@ figure.highlight pre .javascript .function {
   transform: translateZ(0);
 }
 .container .flink {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .container .flink .flink-list {
-  overflow: auto;
-  padding: 10px 10px 0;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
 }
 .container .flink .flink-list > .flink-list-item {
   position: relative;
-  float: left;
-  overflow: hidden;
-  margin: 15px 7px;
-  width: calc(100% / 3 - 15px);
-  height: 90px;
-  line-height: 17px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  gap: 15px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-transform: translateZ(0);
-  border-radius: 8px;
 }
-@media screen and (max-width: 1024px) {
-  .container .flink .flink-list > .flink-list-item {
-    width: calc(50% - 15px) !important;
-  }
-}
-@media screen and (max-width: 600px) {
-  .container .flink .flink-list > .flink-list-item {
-    width: calc(100% - 15px) !important;
-  }
-}
-.container .flink .flink-list > .flink-list-item:hover .flink-item-icon {
-  margin-left: -10px;
-  width: 0;
+.container .flink .flink-list > .flink-list-item:hover {
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -o-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-color: var(--theme-color);
 }
 .container .flink .flink-list > .flink-list-item:before {
   position: absolute;
@@ -2564,48 +2576,84 @@ figure.highlight pre .javascript .function {
 .container .flink .flink-list > .flink-list-item a {
   color: var(--font-color);
   text-decoration: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
 }
 .container .flink .flink-list > .flink-list-item a .flink-item-icon {
-  float: left;
-  overflow: hidden;
-  margin: 15px 10px;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
   width: 60px;
   height: 60px;
-  border-radius: 7px;
-  -webkit-transition: width 0.3s ease-out;
-  -moz-transition: width 0.3s ease-out;
-  -o-transition: width 0.3s ease-out;
-  -ms-transition: width 0.3s ease-out;
-  transition: width 0.3s ease-out;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--highlight-bg);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -ms-transition: -ms-transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .container .flink .flink-list > .flink-list-item a .flink-item-icon img {
   width: 100%;
   height: 100%;
-  -webkit-transition: filter 375ms ease-in 0.2s, -webkit-transform 0.3s;
-  -moz-transition: filter 375ms ease-in 0.2s, -moz-transform 0.3s;
-  -o-transition: filter 375ms ease-in 0.2s, -o-transform 0.3s;
-  -ms-transition: filter 375ms ease-in 0.2s, -ms-transform 0.3s;
-  transition: filter 375ms ease-in 0.2s, transform 0.3s;
   object-fit: cover;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -moz-transition: -moz-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -ms-transition: -ms-transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.container .flink .flink-list > .flink-list-item a .flink-item-content {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0;
 }
 .container .flink .flink-list > .flink-list-item a .img-alt {
   display: none;
 }
+.container .flink .flink-list > .flink-list-item a:hover .flink-item-icon {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
 .container .flink .flink-item-name {
-  padding: 16px 10px 0 0;
-  height: 40px;
-  font-weight: bold;
-  font-size: 1.43em;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: var(--font-color);
+  margin-bottom: 4px;
 }
 .container .flink .flink-item-desc {
-  padding: 16px 10px 16px 0;
-  height: 50px;
-  font-size: 0.93em;
+  font-size: 0.9em;
+  color: var(--text-secondary-color);
+  line-height: 1.4;
 }
 .container .flink .flink-name {
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.8em;
+  color: var(--font-color);
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
 }
 #recent-posts .recent-post-item {
   position: relative;
