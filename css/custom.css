@@ -1,0 +1,53 @@
+/* 友情链接极简行式 */
+#article-container .links-group {
+  margin-bottom: 30px;
+}
+#article-container .links-group > h3 {
+  font-size: 18px;
+  margin: 10px 0 15px;
+  padding-left: 8px;
+  border-left: 3px solid var(--theme-color);
+}
+#article-container .link-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#article-container .link-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border-color);
+  color: var(--font-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+#article-container .link-item:hover {
+  color: var(--theme-color);
+  transform: translateX(5px); /* 轻微右移，极简动效 */
+}
+#article-container .link-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+#article-container .link-info {
+  flex: 1;
+}
+#article-container .link-name {
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+#article-container .link-desc {
+  font-size: 12px;
+  color: var(--font-color-secondary);
+}
+/* 移动端适配 */
+@media (max-width: 768px) {
+  #article-container .link-desc {
+    display: none; /* 移动端隐藏简介，仅显示站名 */
+  }
+}
