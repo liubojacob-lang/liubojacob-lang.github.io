@@ -6,8 +6,9 @@ categories:
   - AI
 tags:
   - AI
-  - 人工智能
-  - 入门
+  - 人工智能基础
+cover: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&h=1080&fit=crop
+top_img: https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1920&h=400&fit=crop
 ---
 
 ## 什么是人工智能？

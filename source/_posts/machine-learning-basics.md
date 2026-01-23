@@ -1,5 +1,7 @@
 ---
 title: 机器学习实战：从线性回归到神经网络
+cover: /images/machine-learning-basics.png
+top_img: /images/machine-learning-basics.png
 date: 2026-01-20 15:00:00
 categories:
   - 后端

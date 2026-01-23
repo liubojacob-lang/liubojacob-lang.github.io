@@ -1,5 +1,5 @@
 ---
-title: Claude Code完全指南：从入门到精通的AI编程助手
+title: 重塑开发流：Claude Code 从入门到精通，开启智能编程新纪元
 date: 2026-01-21 12:47:00
 categories:
   - 工具
@@ -8,17 +8,16 @@ tags:
   - Claude Code
   - AI
   - 开发工具
-  - 效率工具
   - 实战教程
 keywords: Claude Code,AI编程助手,Anthropic,开发工具,CLI工具,代码生成
 description: Claude Code 是 Anthropic 推出的革命性 AI 编程助手。本文全面介绍 Claude Code 的安装、配置和高级用法，帮助你提升 10 倍开发效率。
-index_img: https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&h=400&fit=crop
-banner_img: https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&h=400&fit=crop
+index_img: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&h=400&fit=crop
+banner_img: https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&h=400&fit=crop
+cover: /images/Claude-Code.png
+top_img: /images/Claude-Code.png
 ---
 
 ## 前言
-
-![AI Assistant](https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&h=600&fit=crop)
 
 Claude Code 是 Anthropic 推出的革命性 AI 编程助手，它不同于传统的代码补全工具，而是真正理解你的代码库、能够执行复杂任务的智能伙伴。
 

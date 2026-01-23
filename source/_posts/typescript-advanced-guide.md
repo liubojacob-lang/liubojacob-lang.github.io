@@ -1,5 +1,7 @@
 ---
 title: TypeScript完全指南：从基础到高级类型系统
+cover: /images/typescript-advanced-guide.png
+top_img: /images/typescript-advanced-guide.png
 date: 2026-01-21 00:30:00
 categories:
   - 前端
@@ -7,7 +9,6 @@ categories:
 tags:
   - TypeScript
   - 类型系统
-  - 泛型
   - 前端开发
 ---
 

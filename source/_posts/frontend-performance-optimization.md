@@ -1,5 +1,7 @@
 ---
 title: 前端性能优化完全指南：从理论到实战
+cover: https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop
+top_img: https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop
 date: 2026-01-20 23:30:00
 categories:
   - 前端
@@ -7,7 +9,6 @@ categories:
 tags:
   - 性能优化
   - 前端开发
-  - Web性能
   - JavaScript
 ---
 

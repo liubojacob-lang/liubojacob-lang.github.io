@@ -1,5 +1,7 @@
 ---
 title: Vue3完全指南：组合式API与响应式原理深度解析
+cover: https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1920&h=1080&fit=crop
+top_img: https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1920&h=1080&fit=crop
 date: 2026-01-21 00:00:00
 categories:
   - 前端

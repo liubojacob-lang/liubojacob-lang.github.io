@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: TechFlow
+title: FullStack AI
 description: '专注前端、后端、AI 与工程化技术分享'
 keywords: 前端,后端,AI,全栈,React,Vue,TypeScript,JavaScript,Webpack,Vite,微前端
-author: TechExplorer
+author: FullStack Developer
 language: zh-CN
 timezone: 'Asia/Shanghai'
 

@@ -1,0 +1,63 @@
+- class_name: 优质技术资源
+  class_desc: 以下为精心筛选的优质技术资源网站
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/
+      descr: 快速、简洁且高效的静态博客框架，支持 Markdown 和多种插件
+      avatar: https://hexo.io/icon/favicon-196x196.png
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      descr: 简洁优雅的 Hexo 主题，功能丰富，配置灵活
+      avatar: https://butterfly.js.org/img/avatar.png
+    - name: GitHub
+      link: https://github.com/
+      descr: 全球最大的代码托管平台，开发者协作的首选
+      avatar: https://github.githubassets.com/favicons/favicon.svg
+    - name: 掘金
+      link: https://juejin.cn/
+      descr: 中国领先的技术社区，海量高质量技术文章分享
+      avatar: https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web/static/favicons/favicon-32x32.png
+    - name: SegmentFault
+      link: https://segmentfault.com/
+      descr: 中文开发者社区，技术问答、博客分享与招聘
+      avatar: https://static.segmentfault.com/v-5ef81e3a/global/img/favicon-32x32.png
+    - name: Stack Overflow
+      link: https://stackoverflow.com/
+      descr: 全球最大技术问答社区，解决编程问题的宝库
+      avatar: https://stackoverflow.com/favicon.ico
+    - name: Dev.to
+      link: https://dev.to/
+      descr: 国际化开发者社区，分享技术见解与最佳实践
+      avatar: https://dev.to/favicon.ico
+    - name: MDN Web Docs
+      link: https://developer.mozilla.org/
+      descr: Mozilla 出品的 Web 开发权威文档与技术教程
+      avatar: https://developer.mozilla.org/favicon-48x48.cbbd6b29.png
+    - name: React
+      link: https://react.dev/
+      descr: Meta 开发的 JavaScript 库，构建用户界面的首选
+      avatar: https://react.dev/favicon.ico
+    - name: Vue.js
+      link: https://vuejs.org/
+      descr: 渐进式 JavaScript 框架，易学易用，性能出色
+      avatar: https://vuejs.org/logo.svg
+    - name: 阮一峰的网络日志
+      link: https://www.ruanyifeng.com/blog/
+      descr: 科技博客，技术写作深入浅出，涵盖互联网前沿技术
+      avatar: https://www.ruanyifeng.com/blog/favicon.ico
+    - name: 张鑫旭的博客
+      link: https://www.zhangxinxu.com/
+      descr: 前端技术专家博客，专注 CSS、JavaScript 深度解析
+      avatar: https://www.zhangxinxu.com/favicon.ico
+    - name: Node.js
+      link: https://nodejs.org/
+      descr: 基于 Chrome V8 引擎的 JavaScript 运行时，服务端开发利器
+      avatar: https://nodejs.org/static/images/logo.svg
+    - name: Hugging Face
+      link: https://huggingface.co/
+      descr: AI 领域的 GitHub，海量模型与数据集资源
+      avatar: https://huggingface.co/favicon.ico
+    - name: FreeCodeCamp
+      link: https://www.freecodecamp.org/
+      descr: 免费编程学习平台，从零开始成为全栈开发者
+      avatar: https://www.freecodecamp.org/favicon.ico

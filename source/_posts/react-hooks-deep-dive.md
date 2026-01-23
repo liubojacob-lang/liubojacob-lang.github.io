@@ -1,5 +1,7 @@
 ---
 title: React Hooks完全指南：深入理解现代React开发
+cover: https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=1920&h=1080&fit=crop
+top_img: https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=1920&h=1080&fit=crop
 date: 2026-01-20 23:00:00
 categories:
   - 前端

@@ -6,9 +6,11 @@ categories:
   - AI
 tags:
   - AI应用
-  - 实战项目
+  - 实战教程
   - API开发
   - 模型部署
+cover: https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&h=1080&fit=crop
+top_img: https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&h=400&fit=crop
 ---
 
 ## AI在生产环境中的应用

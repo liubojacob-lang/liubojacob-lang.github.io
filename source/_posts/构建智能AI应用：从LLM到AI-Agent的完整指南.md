@@ -8,12 +8,12 @@ tags:
   - AI
   - LLM
   - AI Agent
-  - RAG
   - LangChain
-  - 全栈开发
   - 实战教程
-index_img: https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&h=400&fit=crop
-banner_img: https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&h=400&fit=crop
+index_img: https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1920&h=400&fit=crop
+cover: /images/Building Intelligent AI Applications.png
+top_img: /images/Building Intelligent AI Applications.png
+banner_img: https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1920&h=400&fit=crop
 ---
 
 ## 前言
