@@ -1,5 +1,6 @@
 ---
 title: 2026 AI核心能力蓝图：从效率工具到协同代理的进化之路
+slug: 2026-ai-core-capabilities-blueprint
 date: 2026-01-23 15:00:00
 tags:
   - AI
@@ -17,7 +18,7 @@ top_img: /images/ai-cognitive-evolution1.jpg
 
 我们正处于AI发展的关键转折点。2024年，AI还主要是提升效率的独立工具；而到了2026年，AI将进化为具备自主决策、多代理协作、隐私保障的"协同代理"。这一转变不仅是技术的升级，更是AI角色的根本性变革。
 
-![2026 AI核心能力蓝图](/images/2026-ai-core-capabilities-blueprint.png)
+![2026 AI核心能力蓝图](/images/2026-ai-core-capabilities-blueprint.webp)
 
 ## 核心演进逻辑
 

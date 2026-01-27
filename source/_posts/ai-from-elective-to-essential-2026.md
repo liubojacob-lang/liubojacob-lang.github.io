@@ -1,5 +1,6 @@
 ---
 title: AI的未来：2026年，从"选修课"到"必修课"的产业变革
+slug: ai-future-from-elective-to-essential
 date: 2026-01-23 16:00:00
 tags:
   - AI
@@ -9,15 +10,15 @@ tags:
 categories:
   - AI技术
 featured: true
-cover: /images/banner1.png
-top_img: /images/banner1.png
+cover: /images/banner1.webp
+top_img: /images/banner1.webp
 ---
 
 ## 引言
 
 人工智能（AI）应用正经历一场深刻的身份变革，从过去企业可选择的技术"选修课"，迅速转变为关乎未来生存与发展的核心"必修课"。根据最新市场数据，全球AI支出预计在2026年将达到2.52万亿美元，年增长率高达44%。这一历史性的转变并非空穴来风，而是由宏观的产业基本面和微观的商业逻辑共同驱动的必然结果。
 
-![2026 AI趋势](/images/ai-from-elective-to-essential.jpg)
+![2026 AI趋势](/images/ai-from-elective-to-essential.webp)
 
 ## 一、产业拐点已至：为何AI应用成为必然选择
 

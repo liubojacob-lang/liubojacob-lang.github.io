@@ -1,5 +1,6 @@
 ---
 title: 智造未来：AI+低代码重构全栈开发范式
+slug: ai-lowcode-future-fullstack-development
 date: 2026-01-22 11:30:00
 categories:
   - 全栈

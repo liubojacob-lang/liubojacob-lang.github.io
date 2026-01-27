@@ -129,7 +129,7 @@ disable_top_img: false
 default_top_img: https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=400&fit=crop
 
 # The banner image of index page
-index_img: /images/homepage-banner.png
+index_img: /images/homepage-banner.webp
 
 # The banner image of archive page
 archive_img: https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&h=400&fit=crop
@@ -265,12 +265,14 @@ toc:
   post: true
   page: false
   number: true  # 显示章节编号
-  expand: true  # 展开所有章节
+  expand: false  # 默认折叠，点击展开
   # Only for post
   style_simple: false
   scroll_percent: true
-  style: hover  # 悬浮显示
+  style: card  # 使用卡片样式
   depth: 3  # TOC层级（1-6）
+  max_depth: 3  # 最大显示深度
+  min_depth: 1  # 最小显示深度
 # 文章目录（TOC）
 
 # 阅读体验
@@ -568,11 +570,11 @@ rightside_scroll_percent: false
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
 # Don't repeat the same value
 rightside_item_order:
-  enable: false
+  enable: true
   # Default: readmode,translate,darkmode,hideAside
   hide:
   # Default: toc,chat,comment
-  show:
+  show: toc  # 显示目录
 
 # Animation for the bottom right config button
 rightside_config_animation: true
@@ -1183,13 +1185,13 @@ instantpage: false
 # Lazyload
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
-  enable: false
+  enable: true
   # Use browser's native lazyload instead of vanilla-lazyload
-  native: false
+  native: true
   # Specify the field to use lazyload (site or post)
   field: site
-  placeholder:
-  blur: false
+  placeholder: /img/loading.gif
+  blur: true
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -1218,7 +1220,7 @@ Open_Graph_meta:
 # Structured Data
 # https://developers.google.com/search/docs/guides/intro-structured-data
 structured_data:
-  enable: false
+  enable: true
   # Alternate name for the site, used in structured data
   # Format: ['name1', 'name2']
   alternate_name:
@@ -1231,6 +1233,8 @@ css_prefix: true
 inject:
   head:
     - <link rel="stylesheet" href="/css/custom_link.css">
+    - <link rel="stylesheet" href="/css/custom_effects.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
     - |
       <style>
         /* 封面图片全屏显示 */
@@ -1315,6 +1319,87 @@ inject:
           scrollbar-color: #555 #2c2c2c;
         }
 
+        /* ========== 面包屑导航样式 ========== */
+        .breadcrumb-container {
+          padding: 12px 20px;
+          margin: 20px 0;
+          background: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(10px);
+          border-radius: 12px;
+          border-left: 4px solid #49b1f5;
+          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+          font-size: 14px;
+        }
+
+        .breadcrumb-list {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        .breadcrumb-item {
+          display: flex;
+          align-items: center;
+          color: #666;
+        }
+
+        .breadcrumb-item a {
+          color: #49b1f5;
+          text-decoration: none;
+          transition: color 0.2s ease;
+        }
+
+        .breadcrumb-item a:hover {
+          color: #fc6423;
+          text-decoration: underline;
+        }
+
+        .breadcrumb-item.active {
+          color: #999;
+          font-weight: 500;
+        }
+
+        .breadcrumb-separator {
+          margin: 0 8px;
+          color: #ccc;
+          font-size: 12px;
+        }
+
+        .breadcrumb-icon {
+          margin-right: 6px;
+          color: #49b1f5;
+        }
+
+        /* 深色模式适配 */
+        [data-theme="dark"] .breadcrumb-container {
+          background: rgba(30, 30, 30, 0.8);
+          border-left-color: #49b1f5;
+          box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        [data-theme="dark"] .breadcrumb-item {
+          color: #9ca3af;
+        }
+
+        [data-theme="dark"] .breadcrumb-item a {
+          color: #49b1f5;
+        }
+
+        [data-theme="dark"] .breadcrumb-item a:hover {
+          color: #fc6423;
+        }
+
+        [data-theme="dark"] .breadcrumb-item.active {
+          color: #6b7280;
+        }
+
+        [data-theme="dark"] .breadcrumb-separator {
+          color: #4b5563;
+        }
+
         /* ========== 背景颜色设置 ========== */
 
         /* 设置网站整体背景为白色 */
@@ -1339,7 +1424,273 @@ inject:
 
       </style>
   bottom:
-    # - <script src="xxxx"></script>
+    - <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+    - |
+      <script>
+        // ========== NProgress 配置 ==========
+        NProgress.configure({
+          easing: 'ease',
+          speed: 500,
+          showSpinner: false,
+          trickleSpeed: 200,
+          minimum: 0.3
+        });
+
+        // 页面加载时启动进度条
+        NProgress.start();
+
+        // 页面加载完成时结束进度条
+        window.addEventListener('load', function() {
+          NProgress.done();
+        });
+
+        // 页面切换时的进度条
+        document.addEventListener('pjax:complete', function() {
+          NProgress.done();
+        });
+      </script>
+    - |
+      <script>
+        // ========== 智能面包屑导航（分类优先，简化降级）==========
+        (function() {
+          // 生成面包屑HTML
+          function generateBreadcrumb() {
+            const path = window.location.pathname;
+
+            // 首页不显示面包屑
+            if (path === '/' || path === '/index.html' || path === '') {
+              return '';
+            }
+
+            // 只在文章页显示面包屑（检查是否存在文章标题元素）
+            if (!document.querySelector('.post-title') && !document.querySelector('#post .post-title')) {
+              return '';
+            }
+
+            let breadcrumbHTML = '<nav class="breadcrumb-container"><ul class="breadcrumb-list">';
+
+            // 首页
+            breadcrumbHTML += `
+              <li class="breadcrumb-item">
+                <a href="/">
+                  <i class="fas fa-home breadcrumb-icon"></i>首页
+                </a>
+              </li>
+            `;
+
+            // 方案1: 优先使用分类链接（从页面 DOM 获取）
+            // 只选择 <a> 标签，避免选择父级 span 包装器
+            const categoryLinks = document.querySelectorAll('a.post-meta-categories');
+
+            // 调试信息
+            console.log('[面包屑] 找到分类链接数量:', categoryLinks.length);
+            categoryLinks.forEach((link, index) => {
+              console.log(`[面包屑] 分类链接 ${index}:`, link.getAttribute('href'), '文本:', link.textContent.trim());
+            });
+
+            if (categoryLinks.length > 0) {
+              // 有分类：使用分类面包屑
+              categoryLinks.forEach((link, index) => {
+                const href = link.getAttribute('href');
+                const text = link.textContent.trim();
+
+                breadcrumbHTML += `
+                  <li class="breadcrumb-separator">/</li>
+                  <li class="breadcrumb-item">
+                    <a href="${href}">${text}</a>
+                  </li>
+                `;
+              });
+              console.log('[面包屑] 使用分类模式');
+            } else {
+              // 方案2: 无分类，检查是否有归档路径（年份/月份）
+              const pathParts = path.split('/').filter(part => part.length > 0 && part !== 'index.html');
+              const yearMatch = pathParts.find(part => /^\d{4}$/.test(part));
+              const monthMatch = pathParts.find(part => /^\d{2}$/.test(part));
+
+              if (yearMatch && monthMatch) {
+                // 有日期路径：生成归档面包屑
+                breadcrumbHTML += `
+                  <li class="breadcrumb-separator">/</li>
+                  <li class="breadcrumb-item">
+                    <a href="/archives/${yearMatch}/">${yearMatch}年</a>
+                  </li>
+                  <li class="breadcrumb-separator">/</li>
+                  <li class="breadcrumb-item">
+                    <a href="/archives/${yearMatch}/${monthMatch}/">${parseInt(monthMatch)}月</a>
+                  </li>
+                `;
+              }
+              // 如果既无分类也无日期，直接显示文章标题（简化版）
+            }
+
+            // 文章标题（始终显示）
+            const titleElement = document.querySelector('.post-title') || document.querySelector('#post .post-title');
+            if (titleElement) {
+              const title = titleElement.textContent.trim();
+              breadcrumbHTML += `
+                <li class="breadcrumb-separator">/</li>
+                <li class="breadcrumb-item active">
+                  <span>${title}</span>
+                </li>
+              `;
+            }
+
+            breadcrumbHTML += '</ul></nav>';
+            return breadcrumbHTML;
+          }
+
+          // 插入面包屑到页面（仅文章页）
+          function insertBreadcrumb() {
+            // 延迟执行，确保页面完全渲染
+            setTimeout(function() {
+              const breadcrumbHTML = generateBreadcrumb();
+              if (!breadcrumbHTML) return;
+
+              // 移除旧的面包屑（如果存在）
+              const oldBreadcrumb = document.querySelector('.breadcrumb-container');
+              if (oldBreadcrumb) {
+                oldBreadcrumb.remove();
+              }
+
+              // 只在文章页插入面包屑
+              const articleContainer = document.querySelector('article#article-container');
+              const postContent = document.querySelector('#post');
+
+              if (articleContainer) {
+                // 插入到文章内容前
+                articleContainer.insertAdjacentHTML('beforebegin', breadcrumbHTML);
+              } else if (postContent) {
+                postContent.insertAdjacentHTML('afterbegin', breadcrumbHTML);
+              }
+            }, 200);
+          }
+
+          // 页面加载完成后执行
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', insertBreadcrumb);
+          } else {
+            insertBreadcrumb();
+          }
+
+          // PJAX 支持
+          document.addEventListener('pjax:complete', function() {
+            setTimeout(insertBreadcrumb, 300);
+          });
+        })();
+      </script>
+    - |
+      <script>
+        // ========== JSON-LD结构化数据（SEO优化）==========
+        (function() {
+          function generateJSONLD() {
+            // 只在文章页生成
+            const titleElement = document.querySelector('.post-title');
+            if (!titleElement) return;
+
+            const title = titleElement.textContent.trim();
+
+            // 获取文章元数据
+            const datePublished = document.querySelector('time[datetime]')?.getAttribute('datetime');
+            const dateModified = document.querySelector('time[data-updated]')?.getAttribute('datetime') || datePublished;
+            const author = document.querySelector('meta[name="author"]')?.getAttribute('content') || 'FullStack Developer';
+            const description = document.querySelector('meta[name="description"]')?.getAttribute('content') || title;
+            const url = window.location.href.split('?')[0].split('#')[0];
+            const image = document.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
+
+            // 获取分类和标签
+            const categories = [];
+            document.querySelectorAll('a.post-meta-categories').forEach(el => {
+              categories.push(el.textContent.trim());
+            });
+
+            const tags = [];
+            document.querySelectorAll('a.post-meta-tags').forEach(el => {
+              tags.push(el.textContent.trim());
+            });
+
+            // 构建JSON-LD
+            const jsonLd = {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": title,
+              "description": description,
+              "author": {
+                "@type": "Person",
+                "name": author
+              },
+              "datePublished": datePublished,
+              "dateModified": dateModified,
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": url
+              }
+            };
+
+            // 添加图片（如果有）
+            if (image) {
+              jsonLd.image = image;
+            }
+
+            // 添加分类
+            if (categories.length > 0) {
+              jsonLd.articleSection = categories[0];
+            }
+
+            // 添加标签
+            if (tags.length > 0) {
+              jsonLd.keywords = tags.join(', ');
+            }
+
+            // 添加发布者信息
+            jsonLd.publisher = {
+              "@type": "Organization",
+              "name": "FullStack AI",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://liubojacob-lang.github.io/img/avatar.jpg"
+              }
+            };
+
+            return JSON.stringify(jsonLd, null, 2);
+          }
+
+          function insertJSONLD() {
+            setTimeout(function() {
+              // 移除旧的JSON-LD
+              const oldJsonLd = document.querySelector('script[data-jsonld="article"]');
+              if (oldJsonLd) {
+                oldJsonLd.remove();
+              }
+
+              // 生成新的JSON-LD
+              const jsonLdString = generateJSONLD();
+              if (!jsonLdString) return;
+
+              // 插入到head中
+              const script = document.createElement('script');
+              script.type = 'application/ld+json';
+              script.setAttribute('data-jsonld', 'article');
+              script.textContent = jsonLdString;
+              document.head.appendChild(script);
+
+              console.log('[SEO] JSON-LD结构化数据已生成');
+            }, 300);
+          }
+
+          // 页面加载完成后执行
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', insertJSONLD);
+          } else {
+            insertJSONLD();
+          }
+
+          // PJAX 支持
+          document.addEventListener('pjax:complete', function() {
+            setTimeout(insertJSONLD, 400);
+          });
+        })();
+      </script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work

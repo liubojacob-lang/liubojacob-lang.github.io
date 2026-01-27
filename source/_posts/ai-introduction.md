@@ -1,5 +1,6 @@
 ---
 title: 人工智能入门：从零开始了解AI
+slug: artificial-introduction-getting-started
 date: 2026-01-20 14:30:00
 categories:
   - 前端

@@ -1,7 +1,8 @@
 ---
 title: 前端工程化实战：Webpack与Vite配置完全指南
-cover: /images/frontend-performance-optimization.jpg
-top_img: /images/frontend-performance-optimization.jpg
+slug: frontend-engineering-webpack-vite-guide
+cover: /images/frontend-performance-optimization.webp
+top_img: /images/frontend-performance-optimization.webp
 date: 2026-01-21 00:15:00
 categories:
   - 前端

@@ -1,5 +1,6 @@
 ---
 title: 2026年主流AI智能体与知识管理框架对比表
+slug: ai-agent-km-framework-comparison-2026
 date: 2026-01-23 14:30:00
 tags:
   - AI
@@ -8,8 +9,8 @@ tags:
   - 框架对比
 categories:
   - AI技术
-cover: /images/ai-agent-framework.jpg
-top_img: /images/ai-agent-framework.jpg
+cover: /images/ai-agent-framework.webp
+top_img: /images/ai-agent-framework.webp
 ---
 
 ## 引言

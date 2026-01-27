@@ -1,5 +1,6 @@
 ---
 title: 全栈提效工具链：AI驱动的开发助手
+slug: fullstack-toolchain-productivity-with-ai
 date: 2026-01-22 12:00:00
 categories:
   - 全栈

@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://liubojacob-lang.github.io/
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:day/:slug/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -124,3 +124,14 @@ sitemap:
   rel: false
   tags: true
   categories: true
+
+# RSS 订阅配置
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content: true
+  content_limit: 140
+  icon: /img/favicon.ico
+  order_by: -date

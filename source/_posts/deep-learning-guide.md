@@ -1,5 +1,6 @@
 ---
 title: 深度学习完全指南：神经网络与实战应用
+slug: deep-learning-neural-networks-guide
 cover: https://images.unsplash.com/photo-1555255707-c07966088b7b?w=1920&h=1080&fit=crop
 top_img: https://images.unsplash.com/photo-1555255707-c07966088b7b?w=1920&h=1080&fit=crop
 date: 2026-01-20 16:00:00

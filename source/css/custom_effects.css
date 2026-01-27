@@ -1,0 +1,222 @@
+/* ========== NProgress 加载条样式定制 ========== */
+
+/* 进度条容器 */
+#nprogress {
+  pointer-events: none;
+}
+
+/* 进度条 */
+#nprogress .bar {
+  background: linear-gradient(90deg, #49b1f5, #fc6423) !important;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  box-shadow: 0 0 10px rgba(73, 177, 245, 0.5);
+}
+
+/* 进度条闪光效果 */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #49b1f5, 0 0 5px #49b1f5;
+  opacity: 1;
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* 加载中的旋转图标 - 已禁用，保留样式以便需要时启用 */
+#nprogress .spinner {
+  display: none;
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] #nprogress .bar {
+  background: linear-gradient(90deg, #49b1f5, #fc6423) !important;
+  box-shadow: 0 0 10px rgba(73, 177, 245, 0.7);
+}
+
+[data-theme="dark"] #nprogress .peg {
+  box-shadow: 0 0 10px #49b1f5, 0 0 5px #49b1f5;
+}
+
+/* ========== Canvas Confetti 彩带画布定位 ========== */
+
+/* 确保彩带画布位于背景层 */
+canvas.confetti-canvas {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+/* 页面内容在彩带之上 */
+#content-inner,
+.layout,
+#page,
+.page-header,
+.card-widget,
+.recent-post-item {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== 文章目录（TOC）浮动优化 ========== */
+
+/* 右侧浮动目录容器 */
+#toc {
+  position: sticky !important;
+  top: 80px !important;
+  max-height: calc(100vh - 120px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* 目录卡片样式 */
+.card-widget.card-toc {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.3s ease !important;
+}
+
+.card-widget.card-toc:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+/* 目录标题 */
+.toc-title {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  color: #1f2937 !important;
+  padding-bottom: 12px !important;
+  border-bottom: 2px solid #f3f4f6 !important;
+  margin-bottom: 16px !important;
+}
+
+/* 目录列表样式 */
+.toc-list {
+  padding-left: 0 !important;
+  margin: 0 !important;
+}
+
+.toc-list-item {
+  margin: 4px 0 !important;
+  padding-left: 0 !important;
+}
+
+/* 目录链接样式 */
+.toc-link {
+  display: block !important;
+  padding: 8px 12px !important;
+  color: #6b7280 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.toc-link:hover {
+  color: #49b1f5 !important;
+  background: rgba(73, 177, 245, 0.08) !important;
+  padding-left: 16px !important;
+}
+
+/* 当前激活的目录项 */
+.toc-link.active {
+  color: #49b1f5 !important;
+  background: rgba(73, 177, 245, 0.12) !important;
+  font-weight: 500 !important;
+  border-left: 3px solid #49b1f5 !important;
+}
+
+/* 子目录缩进 */
+.toc-child {
+  padding-left: 16px !important;
+}
+
+.toc-child .toc-link {
+  font-size: 13px !important;
+  padding: 6px 12px !important;
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .card-widget.card-toc {
+  background: rgba(30, 30, 30, 0.9) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+[data-theme="dark"] .card-widget.card-toc:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .toc-title {
+  color: #e5e7eb !important;
+  border-bottom-color: #374151 !important;
+}
+
+[data-theme="dark"] .toc-link {
+  color: #9ca3af !important;
+}
+
+[data-theme="dark"] .toc-link:hover {
+  color: #49b1f5 !important;
+  background: rgba(73, 177, 245, 0.15) !important;
+}
+
+[data-theme="dark"] .toc-link.active {
+  color: #49b1f5 !important;
+  background: rgba(73, 177, 245, 0.2) !important;
+}
+
+/* 移动端优化 */
+@media screen and (max-width: 768px) {
+  #toc {
+    position: static !important;
+    max-height: 400px !important;
+  }
+
+  .card-widget.card-toc {
+    margin-bottom: 20px !important;
+  }
+}
+
+/* 目录滚动条美化 */
+#toc::-webkit-scrollbar {
+  width: 4px;
+}
+
+#toc::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#toc::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 2px;
+}
+
+#toc::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+[data-theme="dark"] #toc::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+[data-theme="dark"] #toc::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}

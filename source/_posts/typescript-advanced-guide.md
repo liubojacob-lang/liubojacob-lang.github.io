@@ -1,7 +1,8 @@
 ---
 title: TypeScript完全指南：从基础到高级类型系统
-cover: /images/typescript-advanced-guide.png
-top_img: /images/typescript-advanced-guide.png
+slug: typescript-advanced-type-system-guide
+cover: /images/typescript-advanced-guide.webp
+top_img: /images/typescript-advanced-guide.webp
 date: 2026-01-21 00:30:00
 categories:
   - 前端

@@ -16,6 +16,7 @@
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
+    "hexo-generator-feed": "^3.0.0",
     "hexo-generator-index": "^4.0.0",
     "hexo-generator-searchdb": "^1.5.0",
     "hexo-generator-sitemap": "^3.0.1",
@@ -29,5 +30,8 @@
     "hexo-theme-butterfly": "^5.5.3",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-wordcount": "^6.0.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
   }
 }

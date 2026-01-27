@@ -1,5 +1,6 @@
 ---
 title: GitHub常用命令完全指南：从入门到精通
+slug: github-commands-complete-guide
 cover: https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1920&h=1080&fit=crop
 top_img: https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=1920&h=1080&fit=crop
 date: 2026-01-20 22:30:00

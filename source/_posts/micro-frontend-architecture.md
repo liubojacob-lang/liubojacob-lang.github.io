@@ -1,7 +1,8 @@
 ---
 title: 微前端架构实战：qiankun与single-spa完全指南
-cover: /images/micro-frontend-architecture.png
-top_img: /images/micro-frontend-architecture.png
+slug: micro-frontend-architecture-guide
+cover: /images/micro-frontend-architecture.webp
+top_img: /images/micro-frontend-architecture.webp
 date: 2026-01-21 00:45:00
 categories:
   - 前端

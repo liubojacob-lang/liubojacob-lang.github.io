@@ -1,5 +1,6 @@
 ---
 title: AI应用实战：从理论到生产环境的完整指南
+slug: ai-applications-production-guide
 date: 2026-01-20 17:00:00
 categories:
   - 全栈
