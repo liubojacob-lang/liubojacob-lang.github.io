@@ -1,0 +1,624 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>标签: MAS | FullStack AI</title><meta name="author" content="FullStack Developer"><meta name="copyright" content="FullStack Developer"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="专注前端、后端、AI 与工程化技术分享">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FullStack AI">
+<meta property="og:url" content="https://liubojacob-lang.github.io/tags/MAS/index.html">
+<meta property="og:site_name" content="FullStack AI">
+<meta property="og:description" content="专注前端、后端、AI 与工程化技术分享">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://liubojacob-lang.github.io/img/avatar.jpg">
+<meta property="article:author" content="FullStack Developer">
+<meta property="article:tag" content="前端,后端,AI,全栈,React,Vue,TypeScript,JavaScript,Webpack,Vite,微前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://liubojacob-lang.github.io/img/avatar.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://liubojacob-lang.github.io/tags/MAS/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4-b1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.7/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":-1,"unescape":false,"pagination":{"enable":true,"hitsPerPage":10},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '标签: MAS',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'tag'
+}</script><link rel="stylesheet" href="/css/custom_link.css"><link rel="stylesheet" href="/css/custom_effects.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css"><style>
+  /* 封面图片全屏显示 */
+  #page-header,
+  .page-header,
+  .bg-cover {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* 首页封面 */
+  #page,
+  .full-screen {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* 确保背景图片覆盖整个区域 */
+  .cover-bg {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* 文章封面 */
+  .post-bg-cover {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* ========== 优化滚动条样式 ========== */
+
+  /* Webkit 浏览器（Chrome, Safari, Edge）*/
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* 滚动条轨道 */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  /* 滚动条滑块 */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+
+  /* 悬停时的滑块 */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* Firefox 浏览器 */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #888 #f1f1f1;
+  }
+
+  /* 深色模式下的滚动条 */
+  [data-theme="dark"] ::-webkit-scrollbar-track {
+    background: #2c2c2c;
+  }
+
+  [data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+
+  [data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+
+  [data-theme="dark"] * {
+    scrollbar-color: #555 #2c2c2c;
+  }
+
+  /* ========== 面包屑导航样式 ========== */
+  .breadcrumb-container {
+    padding: 12px 20px;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border-left: 4px solid #49b1f5;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    font-size: 14px;
+  }
+
+  .breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    color: #666;
+  }
+
+  .breadcrumb-item a {
+    color: #49b1f5;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .breadcrumb-item a:hover {
+    color: #fc6423;
+    text-decoration: underline;
+  }
+
+  .breadcrumb-item.active {
+    color: #999;
+    font-weight: 500;
+  }
+
+  .breadcrumb-separator {
+    margin: 0 8px;
+    color: #ccc;
+    font-size: 12px;
+  }
+
+  .breadcrumb-icon {
+    margin-right: 6px;
+    color: #49b1f5;
+  }
+
+  /* 深色模式适配 */
+  [data-theme="dark"] .breadcrumb-container {
+    background: rgba(30, 30, 30, 0.8);
+    border-left-color: #49b1f5;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  [data-theme="dark"] .breadcrumb-item {
+    color: #9ca3af;
+  }
+
+  [data-theme="dark"] .breadcrumb-item a {
+    color: #49b1f5;
+  }
+
+  [data-theme="dark"] .breadcrumb-item a:hover {
+    color: #fc6423;
+  }
+
+  [data-theme="dark"] .breadcrumb-item.active {
+    color: #6b7280;
+  }
+
+  [data-theme="dark"] .breadcrumb-separator {
+    color: #4b5563;
+  }
+
+  /* ========== 背景颜色设置 ========== */
+
+  /* 设置网站整体背景为白色 */
+  body,
+  #web-bg {
+    background-color: #ffffff !important;
+  }
+
+  /* 设置卡片背景为白色 */
+  .card-widget,
+  .recent-post-item,
+  .post-card {
+    background-color: #ffffff !important;
+  }
+
+  /* 设置内容区域背景为白色 */
+  #content-inner,
+  .layout,
+  #post {
+    background-color: #ffffff !important;
+  }
+
+</style>
+<meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/atom.xml" title="FullStack AI" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">55</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">19</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 技术博客</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E5%89%8D%E7%AB%AF/"><i class="fa-fw fab fa-html5"></i><span> 前端开发</span></a></li><li><a class="site-page child" href="/categories/%E5%90%8E%E7%AB%AF/"><i class="fa-fw fab fa-node-js"></i><span> 后端开发</span></a></li><li><a class="site-page child" href="/categories/%E5%85%A8%E6%A0%88/"><i class="fa-fw fas fa-code"></i><span> 全栈实战</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/wiki/"><i class="fa-fw fas fa-book"></i><span> 知识库</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920&amp;h=400&amp;fit=crop);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">FullStack AI</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 技术博客</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/%E5%89%8D%E7%AB%AF/"><i class="fa-fw fab fa-html5"></i><span> 前端开发</span></a></li><li><a class="site-page child" href="/categories/%E5%90%8E%E7%AB%AF/"><i class="fa-fw fab fa-node-js"></i><span> 后端开发</span></a></li><li><a class="site-page child" href="/categories/%E5%85%A8%E6%A0%88/"><i class="fa-fw fas fa-code"></i><span> 全栈实战</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/wiki/"><i class="fa-fw fas fa-book"></i><span> 知识库</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">MAS</h1></div></header><main class="layout" id="content-inner"><div id="tag"><div class="article-sort-title">标签 - MAS</div><div class="article-sort"><div class="article-sort-item year">2026</div><div class="article-sort-item"><a class="article-sort-item-img" href="/2026/01/26/multi-agent-collaboration-evolution/" title="多智能体协作演进：从虚拟组织到通信协议的技术革命"><img src="/images/ai-agent-network.jpg" alt="多智能体协作演进：从虚拟组织到通信协议的技术革命" onerror="this.onerror=null;this.src='/img/404.jpg'" loading='lazy'></a><div class="article-sort-item-info"><div class="article-sort-item-time"><i class="far fa-calendar-alt"></i><time class="post-meta-date-created" datetime="2026-01-26T08:00:00.000Z" title="发表于 2026-01-26 16:00:00">2026-01-26</time></div><a class="article-sort-item-title" href="/2026/01/26/multi-agent-collaboration-evolution/" title="多智能体协作演进：从虚拟组织到通信协议的技术革命">多智能体协作演进：从虚拟组织到通信协议的技术革命</a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/ loading='lazy'></div><div class="author-info-name">FullStack Developer</div><div class="author-info-description">专注前端、后端、AI 与工程化技术分享</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">20</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">55</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">19</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/liubojacob-lang"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/liubojacob-lang" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到 TechFlow！专注分享全栈开发与 AI 技术，涵盖前端、后端、工程化及人工智能实战。持续更新中，欢迎交流学习！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/01/26/ai-agent-software-development-paradigm/" title="AI智能体协同：软件开发的范式革新"><img src="/images/ai-agent-paradigm-shift.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI智能体协同：软件开发的范式革新"/ loading='lazy'></a><div class="content"><a class="title" href="/2026/01/26/ai-agent-software-development-paradigm/" title="AI智能体协同：软件开发的范式革新">AI智能体协同：软件开发的范式革新</a><time datetime="2026-01-26T09:00:00.000Z" title="发表于 2026-01-26 17:00:00">2026-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/26/multi-agent-collaboration-evolution/" title="多智能体协作演进：从虚拟组织到通信协议的技术革命"><img src="/images/ai-agent-network.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="多智能体协作演进：从虚拟组织到通信协议的技术革命"/ loading='lazy'></a><div class="content"><a class="title" href="/2026/01/26/multi-agent-collaboration-evolution/" title="多智能体协作演进：从虚拟组织到通信协议的技术革命">多智能体协作演进：从虚拟组织到通信协议的技术革命</a><time datetime="2026-01-26T08:00:00.000Z" title="发表于 2026-01-26 16:00:00">2026-01-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/23/ai-from-elective-to-essential-2026/" title="AI的未来：2026年，从&quot;选修课&quot;到&quot;必修课&quot;的产业变革"><img src="/images/banner1.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AI的未来：2026年，从&quot;选修课&quot;到&quot;必修课&quot;的产业变革"/ loading='lazy'></a><div class="content"><a class="title" href="/2026/01/23/ai-from-elective-to-essential-2026/" title="AI的未来：2026年，从&quot;选修课&quot;到&quot;必修课&quot;的产业变革">AI的未来：2026年，从&quot;选修课&quot;到&quot;必修课&quot;的产业变革</a><time datetime="2026-01-23T08:00:00.000Z" title="发表于 2026-01-23 16:00:00">2026-01-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/23/2026-ai-core-capabilities-blueprint/" title="2026 AI核心能力蓝图：从效率工具到协同代理的进化之路"><img src="/images/ai-cognitive-evolution1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026 AI核心能力蓝图：从效率工具到协同代理的进化之路"/ loading='lazy'></a><div class="content"><a class="title" href="/2026/01/23/2026-ai-core-capabilities-blueprint/" title="2026 AI核心能力蓝图：从效率工具到协同代理的进化之路">2026 AI核心能力蓝图：从效率工具到协同代理的进化之路</a><time datetime="2026-01-23T07:00:00.000Z" title="发表于 2026-01-23 15:00:00">2026-01-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/23/2026-ai-agent-km-framework-comparison/" title="2026年主流AI智能体与知识管理框架对比表"><img src="/images/ai-agent-framework.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年主流AI智能体与知识管理框架对比表"/ loading='lazy'></a><div class="content"><a class="title" href="/2026/01/23/2026-ai-agent-km-framework-comparison/" title="2026年主流AI智能体与知识管理框架对比表">2026年主流AI智能体与知识管理框架对比表</a><time datetime="2026-01-23T06:30:00.000Z" title="发表于 2026-01-23 14:30:00">2026-01-23</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/AI%E6%8A%80%E6%9C%AF/"><span class="card-category-list-name">AI技术</span><span class="card-category-list-count">5</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/AI%E6%8A%80%E6%9C%AF/%E5%85%A8%E6%A0%88/"><span class="card-category-list-name">全栈</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/AI%E6%8A%80%E6%9C%AF/%E6%9E%B6%E6%9E%84/"><span class="card-category-list-name">架构</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%A8%E6%A0%88/"><span class="card-category-list-name">全栈</span><span class="card-category-list-count">4</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%A8%E6%A0%88/AI/"><span class="card-category-list-name">AI</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%A8%E6%A0%88/%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">工具</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">9</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/AI/"><span class="card-category-list-name">AI</span><span class="card-category-list-count">2</span></a></li></ul></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/AI-Agent/" style="font-size: 1.1em; color: #999">AI Agent</a> <a href="/tags/MAS/" style="font-size: 1.1em; color: #999">MAS</a> <a href="/tags/AI%E5%BA%94%E7%94%A8/" style="font-size: 1.23em; color: #999ea6">AI应用</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E6%BC%94%E8%BF%9B/" style="font-size: 1.37em; color: #99a4b2">技术演进</a> <a href="/tags/%E6%9C%AA%E6%9D%A5%E8%B6%8B%E5%8A%BF/" style="font-size: 1.1em; color: #999">未来趋势</a> <a href="/tags/DevOps/" style="font-size: 1.1em; color: #999">DevOps</a> <a href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" style="font-size: 1.1em; color: #999">版本控制</a> <a href="/tags/JavaScript/" style="font-size: 1.23em; color: #999ea6">JavaScript</a> <a href="/tags/PyTorch/" style="font-size: 1.1em; color: #999">PyTorch</a> <a href="/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81/" style="font-size: 1.1em; color: #999">低代码</a> <a href="/tags/Claude-Code/" style="font-size: 1.1em; color: #999">Claude Code</a> <a href="/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" style="font-size: 1.5em; color: #99a9bf">前端开发</a> <a href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/" style="font-size: 1.1em; color: #999">工程化</a> <a href="/tags/Composition-API/" style="font-size: 1.1em; color: #999">Composition API</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 1.1em; color: #999">自动化</a> <a href="/tags/%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/" style="font-size: 1.1em; color: #999">模型部署</a> <a href="/tags/Hooks/" style="font-size: 1.1em; color: #999">Hooks</a> <a href="/tags/AI%E6%9E%B6%E6%9E%84/" style="font-size: 1.1em; color: #999">AI架构</a> <a href="/tags/%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84/" style="font-size: 1.1em; color: #999">前端架构</a> <a href="/tags/Vue3/" style="font-size: 1.1em; color: #999">Vue3</a> <a href="/tags/Webpack/" style="font-size: 1.1em; color: #999">Webpack</a> <a href="/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/" style="font-size: 1.23em; color: #999ea6">架构设计</a> <a href="/tags/%E5%BE%AE%E5%89%8D%E7%AB%AF/" style="font-size: 1.1em; color: #999">微前端</a> <a href="/tags/%E6%8A%80%E6%9C%AF%E8%B6%8B%E5%8A%BF/" style="font-size: 1.1em; color: #999">技术趋势</a> <a href="/tags/%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F/" style="font-size: 1.1em; color: #999">类型系统</a> <a href="/tags/%E6%8F%90%E6%95%88/" style="font-size: 1.1em; color: #999">提效</a> <a href="/tags/LLM/" style="font-size: 1.1em; color: #999">LLM</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F/" style="font-size: 1.1em; color: #999">响应式</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">机器学习</a> <a href="/tags/LangChain/" style="font-size: 1.1em; color: #999">LangChain</a> <a href="/tags/%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E7%B3%BB%E7%BB%9F/" style="font-size: 1.23em; color: #999ea6">多智能体系统</a> <a href="/tags/%E4%BA%A7%E4%B8%9A%E8%B6%8B%E5%8A%BF/" style="font-size: 1.1em; color: #999">产业趋势</a> <a href="/tags/%E6%A1%86%E6%9E%B6%E5%AF%B9%E6%AF%94/" style="font-size: 1.1em; color: #999">框架对比</a> <a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/" style="font-size: 1.1em; color: #999">人工智能基础</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">深度学习</a> <a href="/tags/React/" style="font-size: 1.1em; color: #999">React</a> <a href="/tags/API%E5%BC%80%E5%8F%91/" style="font-size: 1.1em; color: #999">API开发</a> <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" style="font-size: 1.37em; color: #99a4b2">开发工具</a> <a href="/tags/Vite/" style="font-size: 1.1em; color: #999">Vite</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" style="font-size: 1.1em; color: #999">软件工程</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2026/01/">
+            <span class="card-archive-list-date">
+              一月 2026
+            </span>
+            <span class="card-archive-list-count">20</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">20</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">63.1k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-01-27T02:18:35.051Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By FullStack Developer</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4-b1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4-b1"></script><script src="/js/main.js?v=5.5.4-b1"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1.7/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script><script>
+  // ========== NProgress 配置 ==========
+  NProgress.configure({
+    easing: 'ease',
+    speed: 500,
+    showSpinner: false,
+    trickleSpeed: 200,
+    minimum: 0.3
+  });
+
+  // 页面加载时启动进度条
+  NProgress.start();
+
+  // 页面加载完成时结束进度条
+  window.addEventListener('load', function() {
+    NProgress.done();
+  });
+
+  // 页面切换时的进度条
+  document.addEventListener('pjax:complete', function() {
+    NProgress.done();
+  });
+</script>
+<script>
+  // ========== 智能面包屑导航（分类优先，简化降级）==========
+  (function() {
+    // 生成面包屑HTML
+    function generateBreadcrumb() {
+      const path = window.location.pathname;
+
+      // 首页不显示面包屑
+      if (path === '/' || path === '/index.html' || path === '') {
+        return '';
+      }
+
+      // 只在文章页显示面包屑（检查是否存在文章标题元素）
+      if (!document.querySelector('.post-title') && !document.querySelector('#post .post-title')) {
+        return '';
+      }
+
+      let breadcrumbHTML = '<nav class="breadcrumb-container"><ul class="breadcrumb-list">';
+
+      // 首页
+      breadcrumbHTML += `
+        <li class="breadcrumb-item">
+          <a href="/">
+            <i class="fas fa-home breadcrumb-icon"></i>首页
+          </a>
+        </li>
+      `;
+
+      // 方案1: 优先使用分类链接（从页面 DOM 获取）
+      // 只选择 <a> 标签，避免选择父级 span 包装器
+      const categoryLinks = document.querySelectorAll('a.post-meta-categories');
+
+      // 调试信息
+      console.log('[面包屑] 找到分类链接数量:', categoryLinks.length);
+      categoryLinks.forEach((link, index) => {
+        console.log(`[面包屑] 分类链接 ${index}:`, link.getAttribute('href'), '文本:', link.textContent.trim());
+      });
+
+      if (categoryLinks.length > 0) {
+        // 有分类：使用分类面包屑
+        categoryLinks.forEach((link, index) => {
+          const href = link.getAttribute('href');
+          const text = link.textContent.trim();
+
+          breadcrumbHTML += `
+            <li class="breadcrumb-separator">/</li>
+            <li class="breadcrumb-item">
+              <a href="${href}">${text}</a>
+            </li>
+          `;
+        });
+        console.log('[面包屑] 使用分类模式');
+      } else {
+        // 方案2: 无分类，检查是否有归档路径（年份/月份）
+        const pathParts = path.split('/').filter(part => part.length > 0 && part !== 'index.html');
+        const yearMatch = pathParts.find(part => /^\d{4}$/.test(part));
+        const monthMatch = pathParts.find(part => /^\d{2}$/.test(part));
+
+        if (yearMatch && monthMatch) {
+          // 有日期路径：生成归档面包屑
+          breadcrumbHTML += `
+            <li class="breadcrumb-separator">/</li>
+            <li class="breadcrumb-item">
+              <a href="/archives/${yearMatch}/">${yearMatch}年</a>
+            </li>
+            <li class="breadcrumb-separator">/</li>
+            <li class="breadcrumb-item">
+              <a href="/archives/${yearMatch}/${monthMatch}/">${parseInt(monthMatch)}月</a>
+            </li>
+          `;
+        }
+        // 如果既无分类也无日期，直接显示文章标题（简化版）
+      }
+
+      // 文章标题（始终显示）
+      const titleElement = document.querySelector('.post-title') || document.querySelector('#post .post-title');
+      if (titleElement) {
+        const title = titleElement.textContent.trim();
+        breadcrumbHTML += `
+          <li class="breadcrumb-separator">/</li>
+          <li class="breadcrumb-item active">
+            <span>${title}</span>
+          </li>
+        `;
+      }
+
+      breadcrumbHTML += '</ul></nav>';
+      return breadcrumbHTML;
+    }
+
+    // 插入面包屑到页面（仅文章页）
+    function insertBreadcrumb() {
+      // 延迟执行，确保页面完全渲染
+      setTimeout(function() {
+        const breadcrumbHTML = generateBreadcrumb();
+        if (!breadcrumbHTML) return;
+
+        // 移除旧的面包屑（如果存在）
+        const oldBreadcrumb = document.querySelector('.breadcrumb-container');
+        if (oldBreadcrumb) {
+          oldBreadcrumb.remove();
+        }
+
+        // 只在文章页插入面包屑
+        const articleContainer = document.querySelector('article#article-container');
+        const postContent = document.querySelector('#post');
+
+        if (articleContainer) {
+          // 插入到文章内容前
+          articleContainer.insertAdjacentHTML('beforebegin', breadcrumbHTML);
+        } else if (postContent) {
+          postContent.insertAdjacentHTML('afterbegin', breadcrumbHTML);
+        }
+      }, 200);
+    }
+
+    // 页面加载完成后执行
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', insertBreadcrumb);
+    } else {
+      insertBreadcrumb();
+    }
+
+    // PJAX 支持
+    document.addEventListener('pjax:complete', function() {
+      setTimeout(insertBreadcrumb, 300);
+    });
+  })();
+</script>
+<script>
+  // ========== JSON-LD结构化数据（SEO优化）==========
+  (function() {
+    function generateJSONLD() {
+      // 只在文章页生成
+      const titleElement = document.querySelector('.post-title');
+      if (!titleElement) return;
+
+      const title = titleElement.textContent.trim();
+
+      // 获取文章元数据
+      const datePublished = document.querySelector('time[datetime]')?.getAttribute('datetime');
+      const dateModified = document.querySelector('time[data-updated]')?.getAttribute('datetime') || datePublished;
+      const author = document.querySelector('meta[name="author"]')?.getAttribute('content') || 'FullStack Developer';
+      const description = document.querySelector('meta[name="description"]')?.getAttribute('content') || title;
+      const url = window.location.href.split('?')[0].split('#')[0];
+      const image = document.querySelector('meta[property="og:image"]')?.getAttribute('content') || '';
+
+      // 获取分类和标签
+      const categories = [];
+      document.querySelectorAll('a.post-meta-categories').forEach(el => {
+        categories.push(el.textContent.trim());
+      });
+
+      const tags = [];
+      document.querySelectorAll('a.post-meta-tags').forEach(el => {
+        tags.push(el.textContent.trim());
+      });
+
+      // 构建JSON-LD
+      const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": title,
+        "description": description,
+        "author": {
+          "@type": "Person",
+          "name": author
+        },
+        "datePublished": datePublished,
+        "dateModified": dateModified,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": url
+        }
+      };
+
+      // 添加图片（如果有）
+      if (image) {
+        jsonLd.image = image;
+      }
+
+      // 添加分类
+      if (categories.length > 0) {
+        jsonLd.articleSection = categories[0];
+      }
+
+      // 添加标签
+      if (tags.length > 0) {
+        jsonLd.keywords = tags.join(', ');
+      }
+
+      // 添加发布者信息
+      jsonLd.publisher = {
+        "@type": "Organization",
+        "name": "FullStack AI",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://liubojacob-lang.github.io/img/avatar.jpg"
+        }
+      };
+
+      return JSON.stringify(jsonLd, null, 2);
+    }
+
+    function insertJSONLD() {
+      setTimeout(function() {
+        // 移除旧的JSON-LD
+        const oldJsonLd = document.querySelector('script[data-jsonld="article"]');
+        if (oldJsonLd) {
+          oldJsonLd.remove();
+        }
+
+        // 生成新的JSON-LD
+        const jsonLdString = generateJSONLD();
+        if (!jsonLdString) return;
+
+        // 插入到head中
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.setAttribute('data-jsonld', 'article');
+        script.textContent = jsonLdString;
+        document.head.appendChild(script);
+
+        console.log('[SEO] JSON-LD结构化数据已生成');
+      }, 300);
+    }
+
+    // 页面加载完成后执行
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', insertJSONLD);
+    } else {
+      insertJSONLD();
+    }
+
+    // PJAX 支持
+    document.addEventListener('pjax:complete', function() {
+      setTimeout(insertJSONLD, 400);
+    });
+  })();
+</script>
+<canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="输入关键词搜索..." type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4-b1"></script></div></div></body></html>
