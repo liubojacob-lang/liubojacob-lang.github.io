@@ -2,6 +2,60 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://liubojacob-lang.github.io/wiki/index.html</loc>
+    
+    <lastmod>2026-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://liubojacob-lang.github.io/about/index.html</loc>
+    
+    <lastmod>2026-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://liubojacob-lang.github.io/2026/01/22/fullstack-toolchain-productivity/</loc>
+    
+    <lastmod>2026-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://liubojacob-lang.github.io/2026/01/21/claude-code-complete-guide/</loc>
+    
+    <lastmod>2026-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://liubojacob-lang.github.io/2026/01/21/build-ai-applications-from-llm-to-agent/</loc>
+    
+    <lastmod>2026-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://liubojacob-lang.github.io/2026/01/22/ai-lowcode-future/</loc>
+    
+    <lastmod>2026-01-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://liubojacob-lang.github.io/2026/01/21/frontend-engineering-webpack-vite/</loc>
     
     <lastmod>2026-01-27</lastmod>
@@ -47,25 +101,7 @@
   </url>
   
   <url>
-    <loc>https://liubojacob-lang.github.io/2026/01/21/claude-code-complete-guide/</loc>
-    
-    <lastmod>2026-01-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://liubojacob-lang.github.io/2026/01/26/ai-agent-software-development-paradigm/</loc>
-    
-    <lastmod>2026-01-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://liubojacob-lang.github.io/2026/01/21/build-ai-applications-from-llm-to-agent/</loc>
     
     <lastmod>2026-01-27</lastmod>
     
@@ -155,36 +191,9 @@
   </url>
   
   <url>
-    <loc>https://liubojacob-lang.github.io/2026/01/22/fullstack-toolchain-productivity/</loc>
-    
-    <lastmod>2026-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://liubojacob-lang.github.io/2026/01/22/ai-lowcode-future/</loc>
-    
-    <lastmod>2026-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://liubojacob-lang.github.io/2026/01/26/multi-agent-collaboration-evolution/</loc>
     
     <lastmod>2026-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://liubojacob-lang.github.io/about/index.html</loc>
-    
-    <lastmod>2026-01-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -219,15 +228,6 @@
   
   <url>
     <loc>https://liubojacob-lang.github.io/tags/index.html</loc>
-    
-    <lastmod>2026-01-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://liubojacob-lang.github.io/wiki/index.html</loc>
     
     <lastmod>2026-01-25</lastmod>
     
